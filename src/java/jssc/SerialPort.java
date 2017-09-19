@@ -115,11 +115,14 @@ public class SerialPort {
     private static final int PARAMS_FLAG_PARMRK = 2;
     //<- since 2.6.0
 
-    public SerialPort(String portName) {
-        this.portName = portName;
+    public SerialPort() {
         serialInterface = new SerialNativeInterface();
     }
 
+    public void setPortName(String portName) {
+        this.portName = portName;
+    }
+    
     /**
      * Getting port name under operation
      *
